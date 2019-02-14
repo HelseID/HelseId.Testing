@@ -21,6 +21,18 @@
                 Secret = secret
             };
         }
+        
+        public static TestConfiguration Test(string clientId, string scope, string redirectUri, string secret)
+        {
+            return new TestConfiguration
+            {
+                Authority = "https://helseid-sts.test.nhn.no/",
+                TestIdpUrl = "https://hid-testidp.azurewebsites.net",
+                ClientId = clientId,
+                RedirectUri = redirectUri,
+                Scope = scope,
+                Secret = secret
+            };
+        }
     }
-
 }
